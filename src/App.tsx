@@ -54,8 +54,10 @@ function App() {
         const answerObject = {
           question: questions[number].question,
           answer: answer,
-          correct: correct
-        }
+          correct: correct,
+          correctAnswer: questions[number].correct_answer,
+        };
+        setUserAnswers((prev) => [...prev, answerObject]);
       }
   }
 
