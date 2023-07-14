@@ -5,7 +5,7 @@ import QuestionCard from './components/QuestionCard';
 //Types
 import { QuestionState, Difficulty } from './API'; 
 //Styles
-import { GlobalStyle } from './App.styles';
+import { GlobalStyle, Wrapper } from './App.styles';
 
 export type AnswerObject = {
   question: string;
@@ -78,7 +78,8 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <div className="App">
+      {/* <div className="App"> */}
+      <Wrapper>
         <h1>Quiza</h1>
         {/*Display button only when the game is over or when the game is at the last question*/}
         {
@@ -106,7 +107,9 @@ function App() {
             <button className='next' onClick={nextQuestion} value='Next Question'>Next Question</button>
 
           ) : null}
-      </div>
+
+      </Wrapper>
+      {/* </div> */}
     </>
   );
 }
